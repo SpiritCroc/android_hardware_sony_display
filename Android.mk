@@ -1,3 +1,5 @@
+ifeq ($(SONY_AOSP_DISPLAY),true)
+
 ifneq ($(filter msm8084 msm8x84,$(TARGET_BOARD_PLATFORM)),)
     #This is for 8084 based platforms
     include $(call all-named-subdir-makefiles,msm8084)
@@ -13,4 +15,6 @@ ifneq ($(filter msm8916 msm8974 msm8952 msm8994 msm8992,$(TARGET_BOARD_PLATFORM)
 endif
 endif
 endif
+endif
+
 endif
